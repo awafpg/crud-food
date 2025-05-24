@@ -31,8 +31,8 @@ export default function FoodDetailClient({ foods }) {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
-            Authorization: "Bearer <token>",
-            apiKey: "w05KkI9AWhKxzvPFtXotUva-",
+            Authorization: process.env.NEXT_PUBLIC_AUTH_TOKEN,
+            apiKey: process.env.NEXT_PUBLIC_API_KEY,
           },
           body: JSON.stringify({
             ...formData,
@@ -60,8 +60,8 @@ export default function FoodDetailClient({ foods }) {
         {
           method: "DELETE",
           headers: {
-            Authorization: "Bearer <token>",
-            apiKey: "w05KkI9AWhKxzvPFtXotUva-",
+            Authorization: process.env.NEXT_PUBLIC_AUTH_TOKEN,
+            apiKey: process.env.NEXT_PUBLIC_API_KEY,
           },
         }
       );
